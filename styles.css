@@ -1,0 +1,422 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Adicionando Poppins como a fonte principal */
+    font-size: 16px; /* Definindo o tamanho da fonte padrão */
+    background-color: #0b0b0b;
+    color: #fff;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #107c10;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #107c10;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-content {
+    margin-top: 20px; /* Adiciona espaço entre o texto e a imagem */
+}
+
+.about-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 0 0 auto; /* Define o tamanho da imagem como fixo */
+    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.about-image img {
+    max-width: 100%; /* Define a largura máxima da imagem */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+@media screen and (min-width: 768px) {
+    .about-image {
+        max-width: 300px; /* Define uma largura máxima para a imagem na versão desktop */
+        margin: 0 auto; /* Centraliza a imagem na versão desktop */
+    }
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #107c10;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #107c10;
+}
+
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    justify-items: center;
+}
+
+.portfolio-item {
+    background-color: #141414;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.portfolio-carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 0 -10px; /* Margem negativa para compensar o espaçamento entre os itens */
+    padding: 0;
+    list-style: none;
+}
+
+.portfolio-item {
+    flex: 0 0 auto;
+    width: calc(25% - 20px); /* Ajuste o tamanho dos itens e margens conforme necessário */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+}
+
+
+
+/* Adicione estilos para h3 e p conforme necessário */
+
+
+.portfolio-item {
+    flex: 0 0 auto; /* Define a largura fixa dos itens */
+    scroll-snap-align: start; /* Alinha os itens ao início do viewport */
+    margin-right: 10px; /* Espaçamento entre os itens */
+    position: relative; /* Necessário para posicionamento absoluto */
+}
+
+.portfolio-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background-color: #107c10;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+}
+
+.portfolio-btn:hover {
+    background-color: #0a6413;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .portfolio-carousel {
+        flex-wrap: wrap;
+    }
+    .portfolio-item {
+        width: calc(50% - 20px); /* Altere o tamanho dos itens para dispositivos menores */
+    }
+}
+
+
+#observacao {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+    color: #0b0b0b;
+}
+
+#observacao h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #107c10;
+    margin-bottom: 40px;
+}
+
+#observacao p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#observacao ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+#observacao li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Adicione o CSS para a animação do botão de download */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #107c10;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #0a6413;
+}
+
+/* Adicione a animação quando a classe 'download-clicked' for aplicada */
+.download-clicked {
+    background-color: #0a6413; /* Cor de fundo do botão ao clicar */
+    transition: background-color 0.3s;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px; /* Espaçamento entre os ícones */
+    font-size: 32px; /* Tamanho dos ícones */
+    transition: color 0.3s; /* Transição de cor ao passar o mouse */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Definindo cores específicas para cada ícone */
+.social-icons .fa-whatsapp {
+    color: #25D366; /* Cor verde do WhatsApp */
+}
+
+.social-icons .fa-instagram {
+    color: #E1306C; /* Cor do Instagram */
+}
+
+.social-icons .fa-linkedin {
+    color: #0077B5; /* Cor do LinkedIn */
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contato form input,
+#contato form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+#contato form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #107c10;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contato form button:hover {
+    background-color: #0a6413;
+}
+
+footer {
+    background-color: #107c10;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#habilidades {
+    padding: 80px 0;
+}
+
+#habilidades .container {
+    text-align: center;
+}
+
+#habilidades h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #107c10;
+    margin-bottom: 40px;
+}
+
+#habilidades .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+#habilidades .skill {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#habilidades .skill h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #107c10;
+}
+
+#habilidades .skill p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.skill {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease; /* Adicionando transição */
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Movendo para cima quando o mouse passa por cima */
+}
+
+#typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 24px;
+    animation: typing 3s steps(40, end) forwards;
+}
+
+.last-letter {
+    display: inline-block;
+    animation: blink 1s infinite step-end; /* Adiciona um efeito de piscar */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
