@@ -87,7 +87,6 @@ h2 {
 
 .about-image {
     flex: 0 0 auto; /* Define o tamanho da imagem como fixo */
-    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
 }
 
 .about-image img {
