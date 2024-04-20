@@ -420,3 +420,56 @@ footer {
     50% { opacity: 0; }
 }
 
+#portfolio video {
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+/* Estilo para o card do vídeo */
+.portfolio-item1 {
+    background-color: #141414;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaçamento entre os cards */
+}
+
+.video-card video {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.portfolio-item1 h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #107c10;
+}
+
+.portfolio-item1 p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .video-card video{
+        width: 80%; /* Garante que o vídeo não exceda a largura do contêiner pai */
+    }
+
+    .portfolio-item1 {
+        max-width: 90%; /* Define a largura máxima do contêiner para 90% da largura da tela */
+        margin: 0 auto; /* Centraliza horizontalmente */
+}
