@@ -191,20 +191,28 @@ h2 {
     margin-right: 10px; /* Espaçamento entre os itens */
     position: relative; /* Necessário para posicionamento absoluto */
 }
-
-.portfolio-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 30px;
-    background-color: #107c10;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.portfolio-item p {
+    margin-bottom: 50px; /* Aumenta o espaçamento entre a descrição do projeto e o botão */
 }
 
+.portfolio-btn {
+    position: absolute; /* Mantém a posição absoluta para o botão */
+    left: 50%; /* Move o botão para o centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    bottom: 20px; /* Distância do botão até a parte inferior do item */
+    padding: 12px 24px; /* Adiciona um padding ao botão */
+    background-color: #107c10; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+    text-decoration: none;
+}
+
+.portfolio-btn:hover {
+    background-color: #0a6413; /* Altera a cor de fundo ao passar o mouse */
+}
 .portfolio-item:hover .portfolio-btn {
     opacity: 1;
 }
@@ -492,4 +500,28 @@ footer {
 .spotify-player {
     margin-top: 30px;
     border-radius: 12px;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .portfolio-carousel {
+        flex-direction: column; /* Altera a direção do flexbox para empilhar os itens verticalmente */
+    }
+    
+    .portfolio-item {
+        width: 100%; /* Define a largura total para ocupar toda a largura da tela */
+        margin-bottom: 20px; /* Espaçamento entre os itens */
+        position: relative; /* Define a posição relativa para posicionar o botão */
+    }
+
+    .portfolio-item p {
+        margin-bottom: 40px; /* Aumenta o espaçamento entre a descrição do projeto e o botão */
+    }
+    
+    .portfolio-btn {
+        position: absolute; /* Define a posição absoluta para que o botão possa ser posicionado dentro do item */
+        left: 50%; /* Move o botão para o centro horizontalmente */
+        transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+        bottom: 10px; /* Distância do botão até a parte inferior do item */
+    }
 }
